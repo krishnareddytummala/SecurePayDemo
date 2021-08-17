@@ -18,13 +18,12 @@ public class Driver {
 	public static Properties prop = new Properties();
 	public static WebDriver driver;
 
-
-
 	public Driver(){
 		try {
 			prop.load( new FileInputStream("./config/application.properties") );
 		} catch (IOException e) {
 			e.printStackTrace();
+
 		}
 	}
 
@@ -45,11 +44,6 @@ public class Driver {
 		driver.get( prop.getProperty("baseUrl"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-	}
-
-	public String getBaseUrl(){
-		String url = prop.getProperty("baseUrl");
-		return url;
 	}
 
 	public void launchChrome() {

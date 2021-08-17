@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="DFEAutomation" verbose="1" parallel="none" thread-count="1" configfailurepolicy="continue">
-    <test name="DFEAutomation tests" annotations="JDK" preserve-order="true">
+<suite name="SecurePayAutomation" verbose="1" parallel="none" thread-count="1" configfailurepolicy="continue">
+    <test name="SecurePayAutomation tests" annotations="JDK" preserve-order="true">
         <classes>
             <class name="com.ausPost.runner.TestRunner"/>
         </classes>

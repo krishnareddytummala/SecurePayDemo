@@ -1,6 +1,5 @@
 package com.ausPost.pages;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -26,13 +25,12 @@ public class GoogleSearchPage extends BasePage {
         PageFactory.initElements(this.driver, this);
     }
 
-    public void searchSecurePay(){
-        txtSearchGoogle.sendKeys("secure pay");
-        btnGoogleSearch.click();
+    public void searchSecurePay() {
+        type(txtSearchGoogle, "Secure Pay");
+        clickElement(btnGoogleSearch);
     }
 
-    public void clickSecurePayWebsite(){
-        securePayWebsite.click();
+    public void clickSecurePayWebsite() {
+        clickElement(securePayWebsite);
     }
-
 }

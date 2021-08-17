@@ -20,8 +20,7 @@ public class SecurePayContactFillSteps extends ExtentReportListener {
     GoogleSearchPage googleSearchPage = new GoogleSearchPage(driver);
 
     @Given("Searches for SecurePay on google")
-    public void searches_for_SecurePay_on_google()
-    {
+    public void searches_for_SecurePay_on_google() {
         googleSearchPage.searchSecurePay();
     }
 
@@ -38,7 +37,7 @@ public class SecurePayContactFillSteps extends ExtentReportListener {
 
     @Then("Verifies that the contact us page is loaded")
     public void verifies_that_the_contact_us_page_is_loaded() {
-           Assert.assertTrue( securePayContactPage.isSecurePayContactPageDisplayed());
+        Assert.assertTrue(securePayContactPage.isSecurePayContactPageDisplayed());
     }
 
     @Then("Uses the random generated data to fill in the contact us form")

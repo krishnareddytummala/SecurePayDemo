@@ -54,12 +54,8 @@ public class SecurePayContactPage extends BasePage {
     @CacheLookup
     WebElement txtMessage;
 
-    @FindBy(xpath = "//button[@type='submit']")
-    @CacheLookup
-    WebElement btnSendMessage;
-
     public void clickContactUs() {
-        btnContactUs.click();
+        clickElement(btnContactUs);
     }
 
     public boolean isSecurePayContactPageDisplayed() {
@@ -68,13 +64,13 @@ public class SecurePayContactPage extends BasePage {
 
     public void fillContactForm() {
         try {
-            txtFirstName.sendKeys(RandomUtils.getRandomString(5));
-            txtLastName.sendKeys(RandomUtils.getRandomString(5));
-            txtWorkEmail.sendKeys(RandomUtils.getRandomEmail(7));
-            txtCompanyName.sendKeys(RandomUtils.getRandomString(10));
-            txtPhoneNumber.sendKeys(RandomUtils.getRandomNumber(10));
+            type(txtFirstName, RandomUtils.getRandomString(5));
+            type(txtLastName, RandomUtils.getRandomString(5));
+            type(txtWorkEmail, RandomUtils.getRandomEmail(7));
+            type(txtCompanyName, RandomUtils.getRandomString(5));
             txtWebsiteURL.sendKeys(RandomUtils.getRandomWebSite(6));
-            txtMessage.sendKeys(RandomUtils.getRandomString(10));
+            type(txtWebsiteURL, RandomUtils.getRandomWebSite(6));
+            type(txtMessage, RandomUtils.getRandomString(10));
             selectValueFromDropdownByIndex(dropdownAmount);
         } catch (Exception e) {
             e.printStackTrace();
