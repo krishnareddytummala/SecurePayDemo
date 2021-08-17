@@ -36,7 +36,7 @@ public class ExtentReportListener extends Driver{
 
         extent = new ExtentReports();
         extent.attachReporter(report);      
-        extent.setSystemInfo("Application", "DfeAutomation");
+        extent.setSystemInfo("Application", "Automation");
         extent.setSystemInfo("Operating System", System.getProperty("os.name"));
         extent.setSystemInfo("User Name", System.getProperty("user.name"));
         System.out.println("System Info. set in Extent Report");        
